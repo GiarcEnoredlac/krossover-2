@@ -13,6 +13,7 @@ body {
   line-height: 1.42857143;
   color: #58666e;
   background-color: transparent;
+  font-color: #fb4428;
 }
 
 *:focus {
@@ -704,7 +705,7 @@ body {
 }
 
 .app-aside:before {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   z-index: -1;
@@ -785,7 +786,7 @@ body {
 .hbox {
   display: table;
   width: 100%;
-  height: 100%;
+/*  height: 100%;*/
   border-spacing: 0;
   table-layout: fixed;
 }
@@ -793,6 +794,7 @@ body {
 .hbox .col {
   display: table-cell;
   float: none;
+  text-align: center;
   height: 100%;
   vertical-align: top;
 }
@@ -902,8 +904,9 @@ body {
 
 .navbar-brand img {
   display: inline;
-  max-height: 20px;
-  margin-top: -4px;
+  max-height: 26px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   vertical-align: middle;
 }
 
@@ -1086,9 +1089,9 @@ body {
 }
 
 html {
-  background: url('../img/bg.jpg');
+ /* background: url('../img/bg.jpg');
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 .app.container {
