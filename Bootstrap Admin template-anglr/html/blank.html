@@ -1,6 +1,6 @@
 <html lang="en"><head>
   <meta charset="utf-8">
-  <title>Krossover Konnect</title>
+  <title>Krossover Konnect | Dashboard</title>
   <meta name="description" content="Angularjs, Html5, Music, Landing, 4 in 1 ui kits package">
   <meta name="keywords" content="AngularJS, angular, bootstrap, admin, dashboard, panel, app, charts, components,flat, responsive, layout, kit, ui, route, web, app, widgets">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -20,6 +20,9 @@
   <header id="header" class="app-header navbar" role="menu">
           <!-- navbar header -->
       <div class="navbar-header bg-dark">
+        <a href="#" class="navbar-brand text-lt">  
+         <span class="hidden-folded m-l-xs"><img src="img/Krossover Logo.png"></span>
+        </a>
         <button class="pull-right visible-xs dk" ui-toggle="show" target=".navbar-collapse">
           <i class="glyphicon glyphicon-cog"></i>
         </button>
@@ -27,17 +30,92 @@
           <i class="glyphicon glyphicon-align-justify"></i>
         </button>
         <!-- brand -->
-        <a href="#/" class="navbar-brand text-lt">
-          
-         <span class="hidden-folded m-l-xs"><img src="img/Krossover Logo.png"></span>
-        </a>
+        
         <!-- / brand -->
       </div>
       <!-- / navbar header -->
 
       <!-- navbar collapse -->
       <div class="collapse pos-rlt navbar-collapse box-shadow bg-white-only">
-       
+       <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="icon-bell fa-fw"></i>
+              <span class="visible-xs-inline">Notifications</span>
+              <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+            </a>
+            <!-- dropdown -->
+            <div class="dropdown-menu w-xl animated fadeInUp">
+              <div class="panel bg-white">
+                <div class="panel-heading b-light bg-light">
+                  <strong>You have <span>2</span> notifications</strong>
+                </div>
+                <div class="list-group">
+                  <a href="" class="media list-group-item">
+                    <span class="pull-left thumb-sm">
+                      <img src="img/a0.jpg" alt="..." class="img-circle">
+                    </span>
+                    <span class="media-body block m-b-none">
+                      Use awesome animate.css<br>
+                      <small class="text-muted">10 minutes ago</small>
+                    </span>
+                  </a>
+                  <a href="" class="media list-group-item">
+                    <span class="media-body block m-b-none">
+                      1.0 initial released<br>
+                      <small class="text-muted">1 hour ago</small>
+                    </span>
+                  </a>
+                </div>
+                <div class="panel-footer text-sm">
+                  <a href="" class="pull-right"><i class="fa fa-cog"></i></a>
+                  <a href="#notes" data-toggle="class:show animated fadeInRight">See all the notifications</a>
+                </div>
+              </div>
+            </div>
+            <!-- / dropdown -->
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle clear">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="img/a0.jpg" alt="...">
+                <i class="on md b-white bottom"></i>
+              </span>
+              <span class="hidden-sm hidden-md">John.Smith</span> <b class="caret"></b>
+            </a>
+            <!-- dropdown -->
+            <ul class="dropdown-menu animated fadeInRight w">
+              <li class="wrapper b-b m-b-sm bg-light m-t-n-xs">
+                <div>
+                  <p>300mb of 500mb used</p>
+                </div>
+                <div class="progress progress-xs m-b-none dker">
+                  <div class="progress-bar progress-bar-info" data-toggle="tooltip" data-original-title="50%" style="width: 50%"></div>
+                </div>
+              </li>
+              <li>
+                <a href="">
+                  <span class="badge bg-danger pull-right">30%</span>
+                  <span>Settings</span>
+                </a>
+              </li>
+              <li>
+                <a ui-sref="app.page.profile">Profile</a>
+              </li>
+              <li>
+                <a ui-sref="app.docs">
+                  <span class="label bg-info pull-right">new</span>
+                  Help
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a ui-sref="access.signin">Logout</a>
+              </li>
+            </ul>
+            <!-- / dropdown -->
+          </li>
+        </ul>
       </div>
       <!-- / navbar collapse -->
   </header>
@@ -49,7 +127,6 @@
         <li><a href="#">Dashboard</a></li>
         <li><a href="profile.html">Profile</a></li>
         <li><a href="#">Leaderboard</a></li>
-        <li><a href="#">Training</a></li>
         <li><a href="#">Chat</a></li>
         <li><a href="#">Support</a></li>
       </ul>    
@@ -60,87 +137,55 @@
   <div id="content" class="app-content" role="main">
     <div class='wrapper-lg'>
         <div class="row padder-v">
-          <div class='col-md-4'>
-            <div class='row'>
+          <div class='col-md-9'>
+            <div class='col-md-4'>
               <div class="panel panel-default">
                 <div class="panel-heading font-bold">
-                  Next badge
+                  Current Badge
                 </div> <!-- panel-heading end -->
                 <div class="panel-body text-center">
-                  <div class="inline">
-                    <div ui-jq="easyPieChart" ui-options="{
-                          percent: 75,
-                          lineWidth: 10,
-                          trackColor: '#e8eff0',
-                          barColor: '#27c24c',
-                          scaleColor: '#e8eff0',
-                          size: 188,
-                          lineCap: 'butt',
-                          animate: 1000
-                        }" class="easyPieChart" style="width: 188px; height: 188px; line-height: 188px;">
-                    <div>
-                      <span class="h2 m-l-sm step">75 </span>%
-                      <div class="text text-sm">today</div>
-                    </div>
-                      <canvas width="376" height="376" style="width: 188px; height: 188px;"></canvas>
-                    </div>
-                    </div> <!-- ui-jq -->
-                  </div> <!-- inline -->
-                </div> <!-- panel-default -->
-            </div> <!-- inner row end -->
-            <div class='row '>
-              <div class="r bg-light dker item hbox no-border">
-                 <div class="col w-xs v-middle hidden-md">
-                  <div ui-jq="sparkline" ui-options="[60,40], {type:'pie', height:40, sliceColors:['#fad733','#fff']}" class="sparkline inline"><canvas width="80" height="80" style="display: inline-block; width: 40px; height: 40px; vertical-align: top;"></canvas></div>
-                </div>
-                <div class="col dk padder-v r-r">
-                  <div class="text-primary-dk font-thin h1"><span>You're an MVP!!</span></div>
-                  <span class="text-muted text-xs">Current Badge</span>
-                </div>
-              </div>
-              
-            </div> <!-- inner row end -->
-            <div class='row padder-v'>
-              <div class="r bg-light dker item hbox no-border">
-                 <div class="col w-xs v-middle hidden-md">
-                  <div ui-jq="sparkline" ui-options="[60,40], {type:'pie', height:40, sliceColors:['#fad733','#fff']}" class="sparkline inline"><canvas width="80" height="80" style="display: inline-block; width: 40px; height: 40px; vertical-align: top;"></canvas></div>
-                </div>
-                <div class="col dk padder-v r-r">
+                  <img src="img/MVP_gold.png" class='thumb-lg img-circle'>
+                </div> <!-- panel-body -->
+              </div> <!-- panel-default -->
+            </div> <!-- first column -->
+            <div class='col-md-4'>
+              <div class="panel panel-default">
+                  <div class="panel-heading font-bold">
+                    Next badge
+                  </div> <!-- panel-heading end -->
+                  <div class="panel-body text-center">
+                    <div class="inline">
+                      <div ui-jq="easyPieChart" ui-options="{
+                            percent: 75,
+                            lineWidth: 10,
+                            trackColor: '#e8eff0',
+                            barColor: '#27c24c',
+                            scaleColor: '#e8eff0',
+                            size: 188,
+                            lineCap: 'butt',
+                            animate: 1000
+                          }" class="easyPieChart" style="width: 188px; height: 188px; line-height: 188px;">
+                      <div>
+                        <span class="h2 m-l-sm step">75 </span>%
+                        <div class="text text-sm">today</div>
+                      </div>
+                        <canvas width="376" height="376" style="width: 188px; height: 188px;"></canvas>
+                      </div>
+                      </div> <!-- ui-jq -->
+                    </div> <!-- inline -->
+                  </div> <!-- panel-default -->
+            </div> <!-- second column -->
+            <div class='col-md-4'>
+              <div class="panel panel-default">
+                <div class="panel-heading font-bold">
+                  Earnings to Date
+                </div> <!-- panel-heading end -->
+                <div class="panel-body text-center">
                   <div class="text-primary-dk font-thin h1"><span>$12,670</span></div>
-                  <span class="text-muted text-xs">Earnings to date</span>
-                </div>
-              </div>
-            </div> <!-- inner row end -->
-            <div class='row'>
-              <div class="panel panel-default">
-                <div class="panel-heading font-bold">
-                  Next badge
-                </div> <!-- panel-heading end -->
-                <div class="panel-body text-center">
-                  <div class="inline">
-                    <div ui-jq="easyPieChart" ui-options="{
-                          percent: 75,
-                          lineWidth: 10,
-                          trackColor: '#e8eff0',
-                          barColor: '#27c24c',
-                          scaleColor: '#e8eff0',
-                          size: 188,
-                          lineCap: 'butt',
-                          animate: 1000
-                        }" class="easyPieChart" style="width: 188px; height: 188px; line-height: 188px;">
-                    <div>
-                      <span class="h2 m-l-sm step">75 </span>%
-                      <div class="text text-sm">today</div>
-                    </div>
-                      <canvas width="376" height="376" style="width: 188px; height: 188px;"></canvas>
-                    </div>
-                    </div> <!-- ui-jq -->
-                  </div> <!-- inline -->
-                </div> <!-- panel-default -->
-            </div> <!-- inner row end -->
-            
-          </div> <!-- col-md-4 end -->
-          <div class='col-md-8'>
+                </div> <!-- panel-body -->
+              </div> <!-- panel-default -->
+            </div> <!-- third column -->
+            <div class='col-md-12'>
             <div class="panel wrapper">
                 
                 <h4 class="font-thin m-t-none m-b text-muted">Game History</h4>
@@ -161,72 +206,73 @@
                 " style="height:246px" >
                 </div>
               </div>
-               <div class="panel panel-default">
-        <div class="panel-heading">Leaderboard</div>
-        <table class="table table-striped m-b-none">
-          <thead>
-            <tr>
-              <th style="width:60px;" class="text-center">Rank</th>
-              <th>Name</th>                    
-              <th style="width:70px;"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>                    
-              <td>
-                <div ng-init="data1=[ 16,15,15,14,17,18,16,15,16 ]" ui-jq="sparkline" ui-options=", {type:'bar', height:19, barWidth:4, barSpacing:2, barColor:'#27c24c'}" class="sparkline inline"><canvas width="4" height="19" style="display: inline-block; width: 4px; height: 19px; vertical-align: top;"></canvas></div>
-              </td>
-              <td>Banun</td>
-              <td class="text-success">
-                <i class="fa fa-level-up"></i> 40%
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">
-                <div ng-init="data2=[ 60,30,10 ]" ui-jq="sparkline" ui-options=", {type:'pie', height:19, sliceColors:['#23b7e5','#fff','#fad733']}" class="sparkline inline"><canvas width="19" height="19" style="display: inline-block; width: 19px; height: 19px; vertical-align: top;"></canvas></div>
-              </td>
-              <td>Ninja Duck</td>
-              <td class="text-success">
-                <i class="fa fa-level-up"></i> 20%
-              </td>
-            </tr>
-            <tr>                    
-              <td>
-                <div ng-init="data3=[ 16,15,15,14,17,18,16,15,16 ]" ui-jq="sparkline" ui-options=", {type:'line', height:19, width:60, lineColor:'#7266ba', fillColor:'#fff'}" class="sparkline inline"><canvas width="60" height="19" style="display: inline-block; width: 60px; height: 19px; vertical-align: top;"></canvas></div>
-              </td>
-              <td>Craig</td>
-              <td class="text-warning">
-                <i class="fa fa-level-down"></i> 5%
-              </td>
-            </tr>
-            <tr>                    
-              <td>
-                <div ng-init="data4=[ 16,15,15,14,17,18,16,15,16 ]" ui-jq="sparkline" ui-options=", {type:'discrete', height:19, width:60, lineColor:'#27c24c'}" class="sparkline inline"><canvas width="60" height="19" style="display: inline-block; width: 60px; height: 19px; vertical-align: top;"></canvas></div>
-              </td>
-              <td>Petaaaarrr</td>
-              <td class="text-danger">
-                <i class="fa fa-level-down"></i> 20%
-              </td>
-            </tr>
-            <tr>                    
-              <td>
-                <div ng-init="data4=[ 16,15,15,14,17,18,16,15,16 ]" ui-jq="sparkline" ui-options=", {type:'discrete', height:19, width:60, lineColor:'#27c24c'}" class="sparkline inline"><canvas width="60" height="19" style="display: inline-block; width: 60px; height: 19px; vertical-align: top;"></canvas></div>
-              </td>
-              <td>Stefan</td>
-              <td class="text-danger">
-                <i class="fa fa-level-down"></i> 20%
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div> <!-- panel --> 
-          </div>
-        </div> <!-- Row 1 end -->
-        <div class='row'>
-         
-    </div> <!-- ROW 2 End -->
+          </div> 
+          </div>   <!-- col-9  -->    
+          <div class='col-md-3'>
+            <div class="panel panel-default">
+              <div class="panel-heading font-bold ">
+                Leaderboard             
+              </div>
+              <ul class="list-group list-group-lg m-b-none">
+                <li class="list-group-item">
+                  <a href="" class="thumb-sm m-r">
+                    <img src="img/a1.jpg" class="r r-2x">
+                  </a>
+                  <a href="">Damon Parker</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="thumb-sm m-r">
+                    <img src="img/a2.jpg" class="r r-2x">
+                  </a>
+                  <a href="">Joe Waston</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="thumb-sm m-r">
+                    <img src="img/a3.jpg" class="r r-2x">
+                  </a>
+                  <a href="">Jannie Dvis</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="thumb-sm m-r">
+                    <img src="img/a4.jpg" class="r r-2x">
+                  </a>
+                  <a href="">Emma Welson</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="thumb-sm m-r">
+                    <img src="img/a4.jpg" class="r r-2x">
+                  </a>
+                  <a href="">Ninja Duck</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="thumb-sm m-r">
+                    <img src="img/a4.jpg" class="r r-2x">
+                  </a>
+                  <a href="">Craig Calde</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="thumb-sm m-r">
+                    <img src="img/a4.jpg" class="r r-2x">
+                  </a>
+                  <a href="">Petey Casanova</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="thumb-sm m-r">
+                    <img src="img/a4.jpg" class="r r-2x">
+                  </a>
+                  <a href="">B Money</a>
+                </li>
+              </ul>
+              <!-- <div class="panel-footer">
+                
+              </div> -->
+            </div>  <!-- fourth column -->
+        </div> <!-- row end -->
+          
+          
+       
 
-  </div>
+    </div>
   </div>
   <!-- / content -->
 </div>
