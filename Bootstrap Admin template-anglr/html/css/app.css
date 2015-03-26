@@ -113,6 +113,7 @@ a:hover .caret-white {
 
 .progress {
   background-color: #edf1f2;
+  margin: 25px 0 25px 0;
 }
 
 .progress-xxs {
@@ -476,6 +477,9 @@ a.list-group-item.hover {
 .panel-default > .panel-heading,
 .panel-default > .panel-footer {
   border-color: #edf1f2;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "futura";
 }
 
 .panel-group .panel-heading + .panel-collapse .panel-body {
@@ -704,7 +708,10 @@ body {
 
 .app-aside {
   float: left;
+  position: fixed;
+  height: 100%;
 }
+
 
 .app-aside:before {
   position: fixed;
@@ -5074,6 +5081,20 @@ a.text-#000000:hover {
 .panel-body {
   padding: 15px;
   height: 200px;
+}
+
+.profile-text {
+  color: white;
+}
+.profile-text h2 {
+  font-size: 4.25em;
+  text-shadow: 4px 4px black;
+}
+.profile-header{
+
+  font-size: 3em;
+  color: #0A3E5B;
+  margin: 5px 0 20px 0;
 }
 
 /* Moving bar */
