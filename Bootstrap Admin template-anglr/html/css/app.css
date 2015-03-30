@@ -5097,6 +5097,12 @@ a.text-#000000:hover {
   margin: 5px 0 20px 0;
 }
 
+.earnings {
+  background: url(../img/Money_etd.png);
+  background-size: cover;
+
+}
+
 /* Moving bar */
 
 @-webkit-keyframes movingbar {
